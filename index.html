@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>página de documentación técnica</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+
+    <main id="main-doc">
+
+        <section class="main-section-1">
+            <div id="header-section-1">
+                <h1 id="titulo-section-1">JS Documentacion</h1>
+            </div>
+            <div id="nav-link">
+                <a id="item-nav-link" href="#Qué_es_JavaScript">Qué es JavaScript</a>
+                <a id="item-nav-link" href="#Qué_puede_hacer_en_JavaScript">Qué puede hacer en JavaScript</a>
+                <a id="item-nav-link" href="#Qué_NO_PUEDE_hacer_en_JavaScript">Qué NO PUEDE hacer en JavaScript</a>
+                <a id="item-nav-link" href="#Qué_hace_a_JavaScript_único">Qué hace a JavaScript único</a>
+                <a id="item-nav-link" href="#Lenguajes_por_arriba_de_JavaScript">Lenguajes “por arriba de” JavaScript</a>
+                <a id="item-nav-link" href="#Resumen">Resumen</a>
+
+
+
+            </div>
+        </section>
+        <section class="main-section-2">
+            <div id="header-section-2">
+                <h1 id="titulo-section-2">Introduccion</h1>
+                <hr>
+            </div>
+            <h1 id="Qué_es_JavaScript">Que es JavaScript</h1>
+            <p>JavaScript fue creado para “dar vida a las páginas web”. Los programas en este lenguaje se llaman scripts. Se pueden escribir directamente en el HTML de una página web y ejecutarse automáticamente a medida que se carga la página.<br><br> Los
+                scripts se proporcionan y ejecutan como texto plano. No necesitan preparación especial o compilación para correr.</p>
+            <br>
+            <p>En este aspecto, JavaScript es muy diferente a otro lenguaje llamado Java.</p>
+            <div id="cuadro-1">
+                <h2 id="titulo-cuadro-1">¿Por qué se llama JavaScript?</h2>
+                <p>Cuando JavaScript fue creado, inicialmente tenía otro nombre: “LiveScript”. Pero Java era muy popular en ese momento, así que se decidió que el posicionamiento de un nuevo lenguaje como un “Hermano menor” de Java ayudaría.</p>
+                <p>Pero a medida que evolucionaba, JavaScript se convirtió en un lenguaje completamente independiente con su propia especificación llamada ECMAScript, y ahora no tiene ninguna relación con Java.</p>
+            </div>
+            <h4>Comentarios en JavaScript</h4>
+            <div id="">
+                <pre style="font-size: 15px; background-color: rgb(191, 191, 191);"><code><blockquote>
+                    // un comentario de una línea
+
+                    /* este es un comentario
+                     * más largo, de varias líneas
+                     */
+                    
+                    /* Sin embargo, no puedes /* anidar comentarios */ SyntaxError */</blockquote></code></pre>
+            </div>
+
+            <h4>Variables en JavaScript</h4>
+            <div id="">
+                <pre style="font-size: 15px; background-color: rgb(191, 191, 191);"><code><blockquote>
+                    var a;
+                    console.log('El valor de a es ' + a); // El valor de a es undefined
+
+                    console.log('El valor de b es ' + b); // El valor de b es undefined
+                    var b;
+                    // Esto puede desconcertarte hasta que leas 'Elevación de variable' a continuación
+                </blockquote></code></pre>
+
+
+            </div>
+
+            <div id="">
+                <pre style="font-size: 15px; background-color: rgb(191, 191, 191);"><code><blockquote>
+                    let x;
+                    console.log('El valor de x es ' + x); // El valor de x es undefined
+
+                    console.log('El valor de y es ' + y); // Error de referencia no detectada: y no está definida
+                    let y;
+                </blockquote></code></pre>
+
+
+            </div>
+            <h4>Array</h4>
+            <div id="">
+                <pre style="font-size: 15px; background-color: rgb(191, 191, 191);"><code><blockquote>
+                    var myArray = [];
+                    if (!myArray[0]) myFunction();
+                </blockquote></code></pre>
+            </div>
+            <div id="">
+                <h4>Condicionales</h4>
+                <pre style="font-size: 15px; background-color: rgb(191, 191, 191);"><code><blockquote>
+                    if (true) {
+                        var x = 5;
+                      }
+                      console.log(x);  // x es 5
+                </blockquote></code></pre>
+            </div>
+
+            <hr>
+
+            <h1 id="Qué_puede_hacer_en_JavaScript">Qué puede hacer en JavaScript</h1>
+            <p>JavaScript moderno es un lenguaje de programación “seguro”. No proporciona acceso de bajo nivel a la memoria o la CPU (UCP), ya que se creó inicialmente para los navegadores los cuales no lo requieren.</p>
+            <p>Las capacidades de JavaScript dependen en gran medida en el entorno en que se ejecuta. Por ejemplo, Node.JS Soporta funciones que permiten a JavaScript leer y escribir archivos arbitrariamente, realizar solicitudes de red, etc.</p>
+            <p>En el navegador JavaScript puede realizar cualquier cosa relacionada con la manipulación de una página web, interacción con el usuario y el servidor web. Por ejemplo, en el navegador JavaScript es capaz de:</p>
+            <ul>
+                <li>Agregar nuevo HTML a la página, cambiar el contenido existente y modificar estilos.</li>
+                <li>Reaccionar a las acciones del usuario, ejecutarse con los clics del ratón, movimientos del puntero y al oprimir teclas.</li>
+                <li>Enviar solicitudes de red a servidores remotos, descargar y cargar archivos (Tecnologías llamadas AJAX y COMET).</li>
+                <li>Obtener y configurar cookies, hacer preguntas al visitante y mostrar mensajes</li>
+                <li>Recordar datos en el lado del cliente con el almacenamiento local (“local storage”).</li>
+            </ul>
+            <hr>
+
+            <h1 id="Qué_NO_PUEDE_hacer_en_JavaScript">Qué NO PUEDE hacer en JavaScript</h1>
+            <p>Las capacidades de JavaScript en el navegador están limitadas por el bien de la seguridad de usuario. El objetivo es prevenir que una página maliciosa acceda a información privada o dañe los datos de usuario.<br><br>
+                <p>Ejemplos de tales restricciones incluyen:</p>
+                <ul>
+                    <li>JavaScript en el navegador no puede leer y escribir arbitrariamente archivos en el disco duro, copiarlos o ejecutar programas. No tiene acceso directo a funciones del Sistema operativo (OS).</li>
+                    <p>Los navegadores más modernos le permiten trabajar con archivos, pero el acceso es limitado y solo permitido si el usuario realiza ciertas acciones, como “arrastrar” un archivo a la ventana del navegador o seleccionarlo por medio de
+                        una etiqueta input.</p>
+                    <p>Existen maneras de interactuar con la cámara, micrófono y otros dispositivos, pero eso requiere el permiso explícito del usuario. Por lo tanto, una página habilitada para JavaScript no puede habilitar una cámara web para observar el
+                        entorno y enviar la información a la NSA.</p>
+                    <li>Diferentes pestañas y ventanas generalmente no se conocen entre sí. A veces sí lo hacen, por ejemplo, cuando una ventana usa JavaScript para abrir otra. Pero incluso en este caso, JavaScript no puede acceder a la otra si provienen
+                        de diferentes sitios (de diferente dominio, protocolo o puerto).</li>
+                    <p>Esta restricción es conocida como “política del mismo origen” (“Same Origin Policy”). Es posible la comunicación, pero ambas páginas deben acordar el intercambio de datos y contener el código especial de JavaScript que permite controlarlo.
+                        Cubriremos esto en el tutorial.</p>
+                </ul>
+                <hr>
+
+                <h1 id="Qué_hace_a_JavaScript_único">Qué hace a JavaScript único</h1>
+                <p>Existen al menos tres cosas geniales sobre JavaScript:</p>
+                <div id="cuadro-1">
+                    <ul>
+                        <li>Completa integración con HTML y CSS.</li>
+                        <li>Las cosas simples se hacen de manera simple.</li>
+                        <li>Soportado por la mayoría de los navegadores y habilitado de forma predeterminada.</li>
+                    </ul>
+                </div>
+                <p>JavaScript es la única tecnología de los navegadores que combina estas tres cosas.</p>
+                <p>Eso es lo que hace a JavaScript único. Por esto es la herramienta mas extendida para crear interfaces de navegador. Dicho esto, JavaScript también permite crear servidores, aplicaciones móviles, etc.</p>
+                <hr>
+
+
+                <h1 id="Lenguajes_por_arriba_de_JavaScript">Lenguajes “por arriba de” JavaScript</h1>
+                <p>La sintaxis de JavaScript no se adapta a las necesidades de todos. Personas diferentes querrán diferentes características.</p>
+                <p>Esto es algo obvio, porque los proyectos y requerimientos son diferentes para cada persona.</p>
+                <blockquote>Así que recientemente ha aparecido una gran cantidad de nuevos lenguajes, los cuales son Convertidos/Transpilados a JavaScript antes de ser ejecutados en el navegador.</blockquote>
+                <p>Las herramientas modernas hacen la conversión (Transpilación) muy rápida y transparente, permitiendo a los desarrolladores codificar en otros lenguajes y convertirlo automáticamente detrás de escena.</p>
+                <br>
+                <p>Ejemplos de tales lenguajes:</p>
+                <ul>
+                    <li>CoffeeScript Es una “sintaxis azucarada” para JavaScript. Introduce una sintaxis corta, permitiéndonos escribir un código mas claro y preciso. Usualmente desarrolladores de Ruby prefieren este lenguaje.</li><br>
+                    <li>TypeScript se concentra en agregar “tipado estricto” (“strict data typing”) para simplificar el desarrollo y soporte de sistemas complejos. Es desarrollado por Microsoft.</li><br>
+                    <li>FLow también agrega la escritura de datos, pero de una manera diferente. Desarrollado por Facebook.</li><br>
+                    <li>Dart es un lenguaje independiente que tiene su propio motor que se ejecuta en entornos que no son de navegador (como aplicaciones móviles), pero que también se puede convertir/transpilar a JavaScript. Desarrollado por Google.</li><br>
+                    <li>Brython es un transpilador de Python a JavaScript que permite escribir aplicaciones en Python puro sin JavaScript.</li><br>
+                    <li>Kotlin es un lenguaje moderno, seguro y conciso que puede apuntar al navegador o a Node.</li>
+                </ul>
+                <hr>
+
+                <h1 id="Resumen">Resumen</h1>
+                <ul>
+                    <li>JavaScript fue inicialmente creado como un lenguaje solo para el navegador, pero ahora es usado también en muchos otros entornos.</li><br>
+                    <li>Hoy en día, JavaScript tiene una posición única como el lenguaje más extendido y adoptado de navegador, con una integración completa con HTML y CSS.</li><br>
+                    <li>Existen muchos lenguajes que se convierten o transpilan a JavaScript y aportan ciertas características. Es recomendable echarles un vistazo, al menos brevemente, después de dominar JavaScript.</li>
+
+
+                </ul>
+
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
